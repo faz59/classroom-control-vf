@@ -9,4 +9,5 @@ file { '/etc/motd':
 package { 'cowsay':
   ensure   => present,
   provider => gem,
+  
 }
