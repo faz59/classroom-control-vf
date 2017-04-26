@@ -45,6 +45,7 @@ node default {
   include role::classroom
   include users
   include skeleton
+  include nginx
  # file { '/etc/motd':
  #  ensure => file,
  #  content => "Github test exercise 7.1\n",
