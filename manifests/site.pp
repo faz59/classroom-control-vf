@@ -44,7 +44,7 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
-  notify { "Hello, my name is ${::zed010.puppetlabs.vm}": }
+  notify { "Hello, my name is ${::fqdn}": }
 file { '/etc/motd':
 ensure => file,
 owner => 'root',
