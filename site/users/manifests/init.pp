@@ -1,5 +1,5 @@
 class users {
-  users  { 'fundamentals':
+  user  { 'fundamentals':
     ensure => present,
     # password =>'puppet8#labb'
     # groups => ['Users'],
