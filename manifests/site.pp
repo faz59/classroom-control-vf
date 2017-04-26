@@ -53,7 +53,7 @@ node default {
  # }
   
   exec { 'change_content':
-    command => 'echo "7.2 Welcome to ${::fqdn}!" > /etc/motd',
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
     path => '/usr/bin',
     onlyif => 'test -f /etc/motd',  
   }   
