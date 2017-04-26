@@ -49,6 +49,6 @@ node default {
 	  owner   => 'root',
 	  group   => 'root',
 	  mode    => '0644',
-	  content => "Hey, We were troubleshooting today!\n",
+	  content => "Hey, We were troubleshooting today again!\n",
 	}
 }
