@@ -44,12 +44,17 @@ node default {
   #   class { 'my_class': }
   include role::classroom
   
-  file { '/etc/motd':
-    ensure => file,
-    content => "Github test exercise 7.1\n",
-    owner => 'root',
-    group => 'root',
-    mode => '0440',
-  }
+ # file { '/etc/motd':
+ #  ensure => file,
+ #  content => "Github test exercise 7.1\n",
+ #  owner => 'root',
+ #  group => 'root',
+ #  mode => '0440',
+ # }
+  
+  exec { 'change_content':
+    command => '7.2 Welcome to ${::fqdn}! > /etc/motd',
+	  onlyif => ' ! [ -f /etc/motd ]'  
+  }   
   
 }
