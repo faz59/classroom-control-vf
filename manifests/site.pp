@@ -43,20 +43,4 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
-  
-	#file { '/etc/motd':
-	#	ensure  => file,
-	#	owner   => 'root',
-	#	group   => 'root',
-	#	mode    => '0644',
-	#	content => "Hey, We were troubleshooting today again!\n",
-	#}
-	
-	#exec { "cowsay 'Welcome to training.puppetlabs.vm!' > /etc/motd":
-	#	path => '/usr/bin:/usr/local/bin',
-	#	creates => '/etc/motd',
-	#}
-
-	include user
-	include skeleton
 }
