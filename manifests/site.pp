@@ -51,4 +51,9 @@ node default {
   mode    => '0644',
   content => "Hey, Puppet is fun!\n",
 }
+exec { 'cowsay':
+  path    => '/usr/local/bin',
+  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+}
+
 }
