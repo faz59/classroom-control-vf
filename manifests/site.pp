@@ -28,9 +28,7 @@ ini_setting { 'random ordering':
   value   => 'title-hash',
 }
 
-node 'boozezela.puppetlabs.vm' {
-#  inclue nginx
-}
+
 
 
 # DEFAULT NODE
