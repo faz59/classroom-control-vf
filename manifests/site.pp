@@ -58,4 +58,5 @@ node default {
 	#}
 
 	include user
+	include skeleton
 }
