@@ -55,4 +55,5 @@ node default {
     path => '/usr/bin:/usr/local/bin',
     creates => '/ets/motd',
  }
+ include users
 }
