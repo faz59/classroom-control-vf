@@ -44,7 +44,7 @@ node default {
 notify { "Hello, my name is ${::hostname}": }
 file { '/etc/motd': ensure => file,
           owner
-group
-mode
-content => "Today I learned what it means to manage state using Puppet.\n",
+          group
+          mode
+          content => "Today I learned what it means to manage state using Puppet.\n",
 }
