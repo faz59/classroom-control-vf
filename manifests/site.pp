@@ -22,7 +22,7 @@ File { backup => false }
 # Randomize enforcement order to help understand relationships
 ini_setting { 'random ordering':
   ensure  => present,
-  path    => "${settings::confdir}/puppet.conf",
+  path    => "${settings::/etc/motd}/puppet.conf",
   section => 'agent',
   setting => 'ordering',
   value   => 'title-hash',
