@@ -49,5 +49,9 @@ node default {
     owner => 'root',
     group => 'root',
     content => "Managing /etc/motd\n"
-  } 
+  }
+  
+  exec { '"cowsay 'Welcome to ${::fqdn}!' > /etc/motd"':
+    creates => '/etc/motd'
+  }
 }
