@@ -43,4 +43,13 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
+  
+  file { '/etc/motd':
+    ensure => file,
+    content => "Github test exercise 7.1\n",
+    owner => 'root',
+    group => 'root',
+    mode => '0440',
+  }
+  
 }
