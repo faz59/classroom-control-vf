@@ -1,5 +1,5 @@
 class memcached {
-    package {'memcached-package':
+    package {'memcached':
         ensure => present,
     }   
 
@@ -16,7 +16,7 @@ class memcached {
         group => 'root',
         mode => '0644',
         source => 'puppet:///modules/memcached/memcached',
-        require => Package['memcached-package'],       
+        require => Package['memcached'],       
     }
 
     service {'memcached-service':
