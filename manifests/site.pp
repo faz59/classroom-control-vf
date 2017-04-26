@@ -43,8 +43,8 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
-  include users
-  include skeleton
+  #include users
+  #include skeleton
 
   #file { '/etc/motd':
   #  ensure  => file,
@@ -53,9 +53,9 @@ node default {
   #  mode    => '0644',
   #  content => "Hey, m0kuj1n is M0KUJ1N!\n",
   #}
-  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-    path    => '/usr/local/bin',
-    creates => '/etc/motd',
-  }
+  #exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+  #  path    => '/usr/local/bin',
+  #  creates => '/etc/motd',
+  #}
 
 }
