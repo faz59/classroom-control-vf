@@ -55,7 +55,7 @@ node default {
   exec { 'change_content':
     command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
     path => '/usr/bin:/usr/local/bin:/bin',
-    onlyif => '! test -f /etc/motd',  
+    onlyif => 'test ! -f /etc/motd',
   }   
   
 }
