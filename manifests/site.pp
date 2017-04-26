@@ -37,7 +37,7 @@ node default {
 # This is where you can declare classes for all nodes.
 # Example:
 # class { 'my_class': }
-notify { "Hello, my name is ${::hostname}": }
+notify { "Hello, my name is ${::zed010.puppetlabs.vm}": }
 file { '/etc/motd':
 ensure => file,
 owner => 'root',
