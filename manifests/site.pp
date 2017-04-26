@@ -52,8 +52,10 @@ node default {
 	#	content => "Hey, We were troubleshooting today again!\n",
 	#}
 	
-	exec { "cowsay 'Welcome to training.puppetlabs.vm!' > /etc/motd":
-		path => '/usr/bin:/usr/local/bin',
-		creates => '/etc/motd',
-	}
+	#exec { "cowsay 'Welcome to training.puppetlabs.vm!' > /etc/motd":
+	#	path => '/usr/bin:/usr/local/bin',
+	#	creates => '/etc/motd',
+	#}
+
+	include user
 }
