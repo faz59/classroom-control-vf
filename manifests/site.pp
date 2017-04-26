@@ -38,13 +38,12 @@ ini_setting { 'random ordering':
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node default {
-# This is where you can declare classes for all nodes. # Example:
+# Example:
 # class { 'my_class': }
 notify { "Hello, my name is ${::hostname}": }
 file { '/etc/motd': ensure => file,
           owner
-          group
-          mode
-          content => "Today I learned what it means to manage state using Puppet.\n",
-}
+group
+mode
+content => "Today I learned what it means to manage state using Puppet.\n",
+} }
