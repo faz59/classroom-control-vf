@@ -4,4 +4,5 @@ ensure => present,
 # password => 'puppet8#labs',
 # groups => ['Users'], 
 }
+include users
 }
