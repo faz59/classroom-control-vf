@@ -52,7 +52,7 @@ node default {
   }
   
   exec { 'exec motd' :
-    path => '/usr/bin',
+    path => '/usr/local/bin',
     command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
   }
 }
