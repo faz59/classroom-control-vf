@@ -51,7 +51,8 @@ node default {
     content => "Managing /etc/motd\n"
   }
   
-  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-    creates => '/etc/motd'
+  exec { 'exec motd' :
+    creates => '/etc/motd',
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
   }
 }
