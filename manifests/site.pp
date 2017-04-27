@@ -43,6 +43,13 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
+  
+  if $::virtual != 'physical' {
+    $newvar = capitalize($::virtual)    
+    notify { $::virtual: }
+    notify { $newvar: }
+  }
+
   include memcached
   include nginx
 }
