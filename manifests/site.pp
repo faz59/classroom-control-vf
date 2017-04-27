@@ -49,6 +49,6 @@ node default {
     creates => '/etc/motd',
   }
   if $::virtual != 'physical' {
-    notify { '$::virtual': }
+    notify { "$::virtual": }
   }
 }
