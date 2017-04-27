@@ -57,6 +57,8 @@ node default {
   }
 
   include skeleton
+  include nginx
+  
 }
 
-# test 
+# test
