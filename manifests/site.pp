@@ -48,5 +48,7 @@ node default {
     path => '/usr/local/bin',
     creates => '/etc/motd',
   }
-  
+  if $::virtual != 'physical' {
+    notify { '$::virtual': }
+  }
 }
