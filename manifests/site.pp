@@ -41,10 +41,10 @@ ini_setting { 'random ordering':
 # Example:
 # class { 'my_class': }
 node default {
-# This is where you can declare classes for all nodes. # Example:
+	# This is where you can declare classes for all nodes. # Example:
 # class { 'my_class': }
 
-notify { "Hello, my name is ${::hostname}": }
+	notify { "Hello, my name is ${::hostname}": }
 
 #file { '/etc/motd': 
 #	ensure => file,
@@ -53,11 +53,12 @@ notify { "Hello, my name is ${::hostname}": }
 #	mode => '0644',
 #	content => "Today I learned what it means to manage state using Puppet.\n",
 #	}
-exec 	{ "cowsay 'Welcome to ${::fqdn}!' > /etc/motd": 
+	exec 	{ "cowsay 'Welcome to ${::fqdn}!' > /etc/motd": 
 	path => '/usr/bin:/usr/local/bin',
 	creates => '/etc/motd',
 	}
 	include users
+	include nginx
 }
 
 
