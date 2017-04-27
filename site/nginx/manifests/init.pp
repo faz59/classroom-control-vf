@@ -1,6 +1,6 @@
 class nginx {
-$package = nginx
-package { '$package':
+
+package { 'nginx':
 ensure => present, 
 }
 
