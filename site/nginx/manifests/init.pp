@@ -1,7 +1,7 @@
 class nginx {
 
-  package {'nginx'
-    ensure => 'installed',
+  package { 'nginx':
+    ensure => installed,
   }
 
   service { 'nginx':
