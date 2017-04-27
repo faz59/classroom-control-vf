@@ -50,11 +50,13 @@ node default {
     group => 'root',
     content => "Managing /etc/motd\n"
   }
-  
+
   exec { 'exec motd' :
     path => '/usr/local/bin',
     command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
   }
-  
+
   include skeleton
 }
+
+# test 
