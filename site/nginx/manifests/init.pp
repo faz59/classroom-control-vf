@@ -17,7 +17,7 @@ class nginx {
     ensure => directory,
   }
 
-  file {'{$documentroot}/index.html':
+  file {'${documentroot}/index.html':
     ensure => file,
     source => 'puppet:///modules/nginx/index.html',
   }
@@ -26,9 +26,9 @@ class nginx {
     ensure => directory,
   }
 
-  file { '/etc/nginx/{$nginxconf}':
+  file { '/etc/nginx/${nginxconf}':
     ensure => file,
-    source => 'puppet:///modules/nginx/{$nginxconf}',
+    source => 'puppet:///modules/nginx/${nginxconf}',
     require => Package['nginx'],
     notify => Service['nginx'],
   }
@@ -37,9 +37,9 @@ class nginx {
     ensure => directory,
   }
   
-  file { '/etc/nginx/conf.d/{$nginxdef}':
+  file { '/etc/nginx/conf.d/${nginxdef}':
     ensure => file,
-    source => 'puppet:///modules/nginx/{$nginxdef}',
+    source => 'puppet:///modules/nginx/${nginxdef}',
     require => Package['nginx'],
     notify => Service['nginx'],
   }
