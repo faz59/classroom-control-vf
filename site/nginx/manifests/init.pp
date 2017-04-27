@@ -13,13 +13,13 @@ class nginx {
 
   file  {'/var/www':
     ensure => 'directory',
-    require => Servie['nginx'],
+    require => Package['nginx'],
   }
 
   file  {'/etc/nginx/nginx.conf':
     ensure => 'file',
-    source => 'puppet:///modules/nginx/nginx.conf'
-    require => Service['nginx'],
+    source => 'puppet:///modules/nginx/nginx.conf',
+    require => Package['nginx'],
   }
 
   file  {'/etc/nginx/conf.d/default.conf':
