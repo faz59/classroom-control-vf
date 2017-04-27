@@ -11,12 +11,13 @@ ensure => present,
 }
 
 file { '/var/www':
-ensure => directory
+ensure => directory,
 }
 
 file { '/var/www/index.html' :
 ensure => file, 
 source => 'puppet:///modules/nginx/index.html'
+
 }  
 
 file { '/etc/nginx/nginx.conf':
