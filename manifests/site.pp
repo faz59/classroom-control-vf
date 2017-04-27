@@ -45,5 +45,11 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
+  
+if $::virtual !='physical' { 
+ $name = capitalize($::virtual)
+ notify { '$::virtual':}
+ notify { '$name':}
 
 }
+ 
